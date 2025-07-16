@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MortyCard from "../components/MortyCard.astro";
+import mortys from "@/data/mortys.json" assert { type: "json" };
+---
+
+<Layout title="Bienvenido al Morty-Dex">
+  <div class="gallery">
+    {mortys.map((morty) => <MortyCard morty={morty} />)}
+  </div>
+</Layout>
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+</style>

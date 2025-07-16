@@ -1,0 +1,50 @@
+[
+  {
+    "id": "001",
+    "name": "Morty",
+    "slug": "morty-original",
+    "type": "Normal",
+    "description": "El Morty original. Un cóctel de ansiedad y bondad. No lo subestimes.",
+    "image": "/images/morty-original.png"
+  },
+  {
+    "id": "002",
+    "name": "Morty Bigotudo",
+    "slug": "morty-bigotudo",
+    "type": "Papel",
+    "description": "Este Morty tiene un bigote impresionante. Aumenta su carisma pero no su valentía.",
+    "image": "/images/morty-bigotudo.png"
+  },
+  {
+    "id": "003",
+    "name": "Morty Cronenberg",
+    "slug": "morty-cronenberg",
+    "type": "Piedra",
+    "description": "Una abominación genética producto de un suero de amor fallido. Es sorprendentemente resistente.",
+    "image": "/images/morty-cronenberg.png"
+  },
+  {
+    "id": "004",
+    "name": "Morty Sirena",
+    "slug": "morty-sirena",
+    "type": "Tijeras",
+    "description": "Elegante y misterioso. Su canto puede distraer a los oponentes, pero no puede caminar.",
+    "image": "/images/morty-sirena.png"
+  },
+  {
+    "id": "005",
+    "name": "Morty Vaquero",
+    "slug": "morty-vaquero",
+    "type": "Piedra",
+    "description": "Este Morty es rápido con el lazo y lento para confiar. Siempre listo para un duelo.",
+    "image": "/images/morty-vaquero.png"
+  },
+  {
+    "id": "006",
+    "name": "Morty Robot",
+    "slug": "morty-robot",
+    "type": "Tijeras",
+    "description": "Calculador y sin emociones. Su cuerpo metálico le otorga una defensa superior.",
+    "image": "/images/morty-robot.png"
+  }
+]

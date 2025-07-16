@@ -1,0 +1,47 @@
+---
+const { morty } = Astro.props;
+---
+
+<a href={`/mortys/${morty.slug}`} class="card">
+  <img
+    src={morty.image}
+    alt={`Imagen de ${morty.name}`}
+    width="150"
+    height="150"
+  />
+  <h3>#{morty.id}</h3>
+  <h2>{morty.name}</h2>
+</a>
+
+<style>
+  .card {
+    background-color: var(--card-background);
+    border: 2px solid var(--portal-green);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: block;
+  }
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--portal-green);
+  }
+  img {
+    background-color: #24282f;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  h2 {
+    font-size: 1rem;
+    margin: 0.5rem 0 0;
+    color: var(--portal-green);
+  }
+  h3 {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+    color: var(--text-light);
+  }
+</style>
