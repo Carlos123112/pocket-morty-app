@@ -1,50 +1,39 @@
-[
-  {
-    "id": "001",
-    "name": "Morty",
-    "slug": "morty-original",
-    "type": "Normal",
-    "description": "El Morty original. Un cóctel de ansiedad y bondad. No lo subestimes.",
-    "image": "/images/morty-original.png"
-  },
-  {
-    "id": "002",
-    "name": "Morty Bigotudo",
-    "slug": "morty-bigotudo",
-    "type": "Papel",
-    "description": "Este Morty tiene un bigote impresionante. Aumenta su carisma pero no su valentía.",
-    "image": "/images/morty-bigotudo.png"
-  },
-  {
-    "id": "003",
-    "name": "Morty Cronenberg",
-    "slug": "morty-cronenberg",
-    "type": "Piedra",
-    "description": "Una abominación genética producto de un suero de amor fallido. Es sorprendentemente resistente.",
-    "image": "/images/morty-cronenberg.png"
-  },
-  {
-    "id": "004",
-    "name": "Morty Sirena",
-    "slug": "morty-sirena",
-    "type": "Tijeras",
-    "description": "Elegante y misterioso. Su canto puede distraer a los oponentes, pero no puede caminar.",
-    "image": "/images/morty-sirena.png"
-  },
-  {
-    "id": "005",
-    "name": "Morty Vaquero",
-    "slug": "morty-vaquero",
-    "type": "Piedra",
-    "description": "Este Morty es rápido con el lazo y lento para confiar. Siempre listo para un duelo.",
-    "image": "/images/morty-vaquero.png"
-  },
-  {
-    "id": "006",
-    "name": "Morty Robot",
-    "slug": "morty-robot",
-    "type": "Tijeras",
-    "description": "Calculador y sin emociones. Su cuerpo metálico le otorga una defensa superior.",
-    "image": "/images/morty-robot.png"
-  }
-]
+                                    <span class="badge bg-secondary ms-2">${character.status}</span>
+                                    <span class="badge bg-info ms-2">${character.species}</span>
+                                    ${character.type ? `<span class="badge bg-warning text-dark ms-2">${character.type}</span>` : ''}
+                                </div>
+                                
+                                <div class="character-details">
+                                    <p class="mb-2"><strong>📍 Localización:</strong> <br>${character.location.name}</p>
+                                    <p class="mb-2"><strong>🌎 Planeta de origen:</strong> <br>${character.origin.name}</p>
+                                    <p class="mb-2"><strong>🎬 Episodios:</strong> ${character.episode.length}</p>
+                                    <p class="mb-2"><strong>📅 Creado:</strong> ${new Date(character.created).toLocaleDateString()}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+=======
+                charactersContainer.innerHTML += characters.map(character => `
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <img src="${character.image}" class="card-img-top" alt="${character.name}">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">${character.name}</h5>
+                                <div class="character-tags">
+                                    <span class="badge bg-status-${character.status.toLowerCase()} me-1">
+                                        ${character.status}
+                                    </span>
+                                    <span class="badge bg-species">${character.species}</span>
+                                    ${character.type ? `<span class="badge bg-type">${character.type}</span>` : ''}
+                                </div>
+                                <div class="character-details">
+                                    <p><i class="fas fa-map-marker-alt"></i> ${character.location.name}</p>
+                                    <p><i class="fas fa-globe"></i> ${character.origin.name}</p>
+                                    <p><i class="fas fa-film"></i> ${character.episode.length} episodios</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+>>>>>>> REPLACE
